@@ -43,6 +43,12 @@ const HeroSection = () => {
             >
               Conheça a empresa
             </a>
+            <a
+              href="/vitrine"
+              className="bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/40 px-8 py-4 rounded-lg font-heading font-semibold text-lg hover:bg-primary-foreground/20 transition-colors"
+            >
+              Ver nossos produtos
+            </a>
           </div>
         </motion.div>
       </div>
