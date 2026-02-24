@@ -5,11 +5,13 @@ import bgAbout from "@/assets/bg-about.jpg";
 const AboutSection = () => {
   return (
     <section id="sobre" className="relative py-20 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={bgAbout} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-background/92" />
-      </div>
+      {/* Background parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: `url(${bgAbout})` }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-background/92" />
 
       <div className="relative container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

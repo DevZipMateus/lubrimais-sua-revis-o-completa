@@ -26,11 +26,13 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="servicos" className="relative py-20 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={bgServices} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-background/93" />
-      </div>
+      {/* Background parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: `url(${bgServices})` }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-background/93" />
 
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-14">

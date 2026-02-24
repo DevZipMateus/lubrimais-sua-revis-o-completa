@@ -7,15 +7,14 @@ const HeroSection = () => {
       id="inicio"
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Oficina de troca de óleo profissional"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-hero-overlay/85" />
-      </div>
+      {/* Background parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="Oficina de troca de óleo profissional"
+      />
+      <div className="absolute inset-0 bg-hero-overlay/85" />
 
       <div className="relative container mx-auto px-4 text-center py-32">
         <motion.div
