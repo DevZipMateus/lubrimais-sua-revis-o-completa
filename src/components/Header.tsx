@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Valores", href: "#valores" },
   { label: "Horários", href: "#horarios" },
   { label: "Contato", href: "#contato" },
+  { label: "Vitrine", href: "/vitrine" },
 ];
 
 const Header = () => {
