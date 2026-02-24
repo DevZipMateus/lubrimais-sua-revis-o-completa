@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-lubrimais.png";
 
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Valores", href: "#valores" },
-  { label: "Horários", href: "#horarios" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Valores", href: "/#valores" },
+  { label: "Horários", href: "/#horarios" },
+  { label: "Contato", href: "/#contato" },
   { label: "Vitrine", href: "/vitrine" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -22,16 +25,32 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setIsOpen(false);
+
+    // If we're on the home page and it's an anchor link, scroll smoothly
+    if (isHome && href.startsWith("/#")) {
+      e.preventDefault();
+      const id = href.replace("/#", "");
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+    // Otherwise, let the browser navigate to /#section naturally
+  };
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-background/80 backdrop-blur-sm"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md transition-shadow duration-300">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#inicio" className="flex items-center">
+        <a
+          href="/"
+          className="flex items-center"
+          onClick={(e) => {
+            if (isHome) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
           <img src={logo} alt="Logo Lubrimais Lubrificantes" className="h-12 md:h-14" />
         </a>
 
@@ -41,6 +60,7 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-heading font-semibold text-foreground/80 hover:text-primary transition-colors"
             >
               {link.label}
@@ -75,7 +95,7 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 className="text-foreground/80 font-heading font-semibold hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </a>
