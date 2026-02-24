@@ -11,9 +11,10 @@ const ScheduleSection = () => {
         style={{ backgroundImage: `url(${bgSchedule})` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-background/93" />
+      <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
+        <div className="bg-background/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             Quando estamos abertos
@@ -80,6 +81,7 @@ const ScheduleSection = () => {
               Ver no Google Maps
             </a>
           </motion.div>
+        </div>
         </div>
       </div>
     </section>
