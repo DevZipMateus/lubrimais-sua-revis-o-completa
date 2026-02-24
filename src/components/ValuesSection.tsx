@@ -39,9 +39,10 @@ const ValuesSection = () => {
         style={{ backgroundImage: `url(${bgValues})` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-hero-overlay/88" />
+      <div className="absolute inset-0 bg-hero-overlay/70" />
 
       <div className="relative container mx-auto px-4">
+        <div className="bg-hero-overlay/50 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             No que acreditamos
@@ -103,6 +104,7 @@ const ValuesSection = () => {
               </p>
             </motion.div>
           ))}
+        </div>
         </div>
       </div>
     </section>

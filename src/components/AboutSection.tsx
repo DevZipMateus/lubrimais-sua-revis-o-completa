@@ -11,9 +11,10 @@ const AboutSection = () => {
         style={{ backgroundImage: `url(${bgAbout})` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-background/92" />
+      <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
+        <div className="bg-background/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -61,6 +62,7 @@ const AboutSection = () => {
               </div>
             </div>
           </motion.div>
+        </div>
         </div>
       </div>
     </section>
