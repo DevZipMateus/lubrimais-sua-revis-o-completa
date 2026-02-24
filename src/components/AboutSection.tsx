@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-img.jpg";
+import bgAbout from "@/assets/bg-about.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="sobre" className="relative py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={bgAbout} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-background/92" />
+      </div>
+
+      <div className="relative container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}

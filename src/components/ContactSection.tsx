@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import bgContact from "@/assets/bg-contact.jpg";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="relative py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={bgContact} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-background/93" />
+      </div>
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             Fale conosco
@@ -23,7 +30,7 @@ const ContactSection = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             <a
               href="mailto:kleberczampoli@gmail.com"
-              className="flex items-center gap-4 bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
+              className="flex items-center gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-6 h-6 text-primary" />
@@ -38,7 +45,7 @@ const ContactSection = () => {
               href="https://wa.me/5599999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
+              className="flex items-center gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Phone className="w-6 h-6 text-primary" />
@@ -53,7 +60,7 @@ const ContactSection = () => {
               href="https://www.google.com/maps/search/Rua+Usina+de+Canoas+1101+Rosana+SP"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
+              className="flex items-center gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <MapPin className="w-6 h-6 text-primary" />
@@ -68,7 +75,7 @@ const ContactSection = () => {
               href="https://www.instagram.com/lubrimaislubrificantes"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-card rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
+              className="flex items-center gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-shadow group"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Instagram className="w-6 h-6 text-primary" />
