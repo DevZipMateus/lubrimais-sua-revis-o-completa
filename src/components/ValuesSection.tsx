@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Eye, Award, Zap, Leaf } from "lucide-react";
+import bgValues from "@/assets/bg-values.jpg";
 
 const values = [
   {
@@ -31,8 +32,14 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section id="valores" className="py-20 bg-primary">
-      <div className="container mx-auto px-4">
+    <section id="valores" className="relative py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={bgValues} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-hero-overlay/88" />
+      </div>
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             No que acreditamos

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplets, Filter, FlaskConical } from "lucide-react";
+import bgServices from "@/assets/bg-services.jpg";
 
 const services = [
   {
@@ -24,8 +25,14 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-20 bg-section-alt">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="relative py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={bgServices} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-background/93" />
+      </div>
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             O que fazemos
@@ -43,7 +50,7 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-border group"
+              className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-border group"
             >
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-7 h-7 text-primary" />

@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import { Clock, MapPin } from "lucide-react";
+import bgSchedule from "@/assets/bg-schedule.jpg";
 
 const ScheduleSection = () => {
   return (
-    <section id="horarios" className="py-20 bg-section-alt">
-      <div className="container mx-auto px-4">
+    <section id="horarios" className="relative py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={bgSchedule} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-background/93" />
+      </div>
+
+      <div className="relative container mx-auto px-4">
         <div className="text-center mb-14">
           <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
             Quando estamos abertos
@@ -19,7 +26,7 @@ const ScheduleSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card rounded-2xl p-8 shadow-lg border border-border"
+            className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -48,7 +55,7 @@ const ScheduleSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="bg-card rounded-2xl p-8 shadow-lg border border-border"
+            className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-border"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
