@@ -14,7 +14,7 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-background/80 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-background/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
