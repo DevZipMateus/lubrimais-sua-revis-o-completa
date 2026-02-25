@@ -12,7 +12,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section id="valores" className="relative py-20 overflow-hidden">
+    <section id="valores" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${bgValues})` }}
@@ -21,7 +21,7 @@ const ValuesSection = () => {
       <div className="absolute inset-0 bg-hero-overlay/70" />
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-hero-overlay/35 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-hero-overlay/35 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-xl">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0, y: 20 }}
@@ -31,12 +31,12 @@ const ValuesSection = () => {
             <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
               No que acreditamos
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mt-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary-foreground mt-2">
               Missão, visão e valores
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-14">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto mb-8 sm:mb-14">
             {[
               {
                 title: "Nossa missão",
@@ -54,7 +54,7 @@ const ValuesSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 whileHover={{ scale: 1.02, boxShadow: "0 15px 30px -10px rgba(0,0,0,0.3)" }}
-                className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/20 transition-all"
+                className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 border border-primary-foreground/20 transition-all"
               >
                 <h3 className="text-xl font-heading font-bold text-primary-foreground mb-3">
                   {item.title}
@@ -64,7 +64,7 @@ const ValuesSection = () => {
             ))}
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}

@@ -4,7 +4,7 @@ import bgVitrine from "@/assets/bg-vitrine.jpg";
 
 const VitrineSection = () => {
   return (
-    <section id="produtos" className="relative py-20 overflow-hidden">
+    <section id="produtos" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${bgVitrine})` }}
@@ -27,7 +27,7 @@ const VitrineSection = () => {
       </div>
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-hero-overlay/35 backdrop-blur-sm rounded-3xl p-8 md:p-14 shadow-xl">
+        <div className="bg-hero-overlay/35 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-14 shadow-xl">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -56,7 +56,7 @@ const VitrineSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary-foreground mt-2 mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary-foreground mt-2 mb-4 sm:mb-6"
             >
               Confira nossos produtos
             </motion.h2>
@@ -66,7 +66,7 @@ const VitrineSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="text-primary-foreground/80 text-lg leading-relaxed mb-10 max-w-2xl mx-auto"
+              className="text-primary-foreground/80 text-base sm:text-lg leading-relaxed mb-6 sm:mb-10 max-w-2xl mx-auto"
             >
               Trabalhamos com as melhores marcas de lubrificantes, filtros e aditivos do mercado. Acesse nossa vitrine e conheça toda a nossa linha de produtos com preços e disponibilidade em tempo real.
             </motion.p>
@@ -80,7 +80,7 @@ const VitrineSection = () => {
             >
               <motion.a
                 href="/vitrine"
-                className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-heading font-bold text-lg transition-all"
+                className="inline-flex items-center justify-center gap-3 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-bold text-base sm:text-lg transition-all w-full sm:w-auto"
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -10px rgba(227, 30, 36, 0.5)" }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -96,7 +96,7 @@ const VitrineSection = () => {
                 href="https://wa.me/5599999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/40 px-8 py-4 rounded-lg font-heading font-semibold text-lg hover:bg-primary-foreground/20 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/40 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-base sm:text-lg hover:bg-primary-foreground/20 transition-colors w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
               >

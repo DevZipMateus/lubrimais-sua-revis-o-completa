@@ -16,7 +16,7 @@ const itemVariants = {
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="relative py-20 overflow-hidden">
+    <section id="sobre" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${bgAbout})` }}
@@ -25,8 +25,8 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-background/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="bg-background/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-xl">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -60, rotate: -2 }}
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
@@ -51,7 +51,7 @@ const AboutSection = () => {
               <motion.span variants={itemVariants} className="text-accent font-heading font-bold text-sm uppercase tracking-widest block">
                 Nossa história
               </motion.span>
-              <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2 mb-6">
+              <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mt-2 mb-4 sm:mb-6">
                 Sobre a Lubrimais
               </motion.h2>
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed mb-4">
@@ -60,7 +60,7 @@ const AboutSection = () => {
               <motion.p variants={itemVariants} className="text-muted-foreground leading-relaxed mb-6">
                 Tivemos que lidar com uma mudança na cultura da região, onde não existia uma empresa focada somente na troca de óleo. Com qualidade nos produtos e atendimento, hoje temos mais de 10 anos de mercado sendo referência nesse tipo de prestação de serviço.
               </motion.p>
-              <motion.div variants={itemVariants} className="grid grid-cols-3 gap-4">
+              <motion.div variants={itemVariants} className="grid grid-cols-3 gap-2 sm:gap-4">
                 {[
                   { value: "10+", label: "Anos de mercado", color: "text-primary" },
                   { value: "100%", label: "Dedicação", color: "text-primary" },
@@ -68,12 +68,12 @@ const AboutSection = () => {
                 ].map((stat) => (
                   <motion.div
                     key={stat.label}
-                    className="text-center p-4 bg-secondary rounded-xl"
+                    className="text-center p-3 sm:p-4 bg-secondary rounded-xl"
                     whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)" }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className={`text-3xl font-heading font-black ${stat.color}`}>{stat.value}</div>
-                    <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                    <div className={`text-2xl sm:text-3xl font-heading font-black ${stat.color}`}>{stat.value}</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>
                   </motion.div>
                 ))}
               </motion.div>

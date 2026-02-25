@@ -4,7 +4,7 @@ import bgSchedule from "@/assets/bg-schedule.jpg";
 
 const ScheduleSection = () => {
   return (
-    <section id="horarios" className="relative py-20 overflow-hidden">
+    <section id="horarios" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${bgSchedule})` }}
@@ -13,7 +13,7 @@ const ScheduleSection = () => {
       <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-background/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-background/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-xl">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0, y: 20 }}
@@ -23,12 +23,12 @@ const ScheduleSection = () => {
             <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
               Quando estamos abertos
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">
               Horários de funcionamento
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}

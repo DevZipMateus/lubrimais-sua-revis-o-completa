@@ -11,7 +11,7 @@ const contacts = [
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="relative py-20 overflow-hidden">
+    <section id="contato" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: `url(${bgContact})` }}
@@ -20,7 +20,7 @@ const ContactSection = () => {
       <div className="absolute inset-0 bg-background/70" />
 
       <div className="relative container mx-auto px-4">
-        <div className="bg-background/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-background/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 shadow-xl">
           <motion.div
             className="text-center mb-14"
             initial={{ opacity: 0, y: 20 }}
@@ -30,20 +30,20 @@ const ContactSection = () => {
             <span className="text-accent font-heading font-bold text-sm uppercase tracking-widest">
               Fale conosco
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">
               Entre em contato
             </h2>
           </motion.div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               {contacts.map((contact, index) => (
                 <motion.a
                   key={contact.label}
                   href={contact.href}
                   target={contact.external ? "_blank" : undefined}
                   rel={contact.external ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-md border border-border group"
+                  className="flex items-center gap-3 sm:gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-md border border-border group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
