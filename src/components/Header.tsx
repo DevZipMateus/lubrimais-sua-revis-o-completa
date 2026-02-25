@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md transition-shadow duration-300">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3">
         <a
           href="/"
           className="flex items-center"
@@ -51,7 +51,7 @@ const Header = () => {
             }
           }}
         >
-          <img src={logo} alt="Logo Lubrimais Lubrificantes" className="h-12 md:h-14" />
+          <img src={logo} alt="Logo Lubrimais Lubrificantes" className="h-10 sm:h-12 md:h-14" />
         </a>
 
         {/* Desktop nav */}

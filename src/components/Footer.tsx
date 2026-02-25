@@ -3,9 +3,9 @@ import { Instagram, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+    <footer className="bg-foreground py-8 sm:py-10 md:py-12">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
           <div>
             <img src={logo} alt="Logo Lubrimais Lubrificantes" className="h-12 mb-4 brightness-0 invert" />
             <p className="text-background/60 text-sm leading-relaxed">

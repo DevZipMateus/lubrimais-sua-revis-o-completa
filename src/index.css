@@ -104,5 +104,18 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 70px;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+/* Disable parallax fixed backgrounds on mobile for performance */
+@media (max-width: 768px) {
+  .bg-fixed {
+    background-attachment: scroll !important;
+  }
 }
